@@ -1,1 +1,4 @@
-.netrwhist
+/.netrwhist
+*.pyc
+*.pyo
+__pycache__/

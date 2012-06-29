@@ -1,5 +1,6 @@
 " Pathogen package manager
-runtime bundle/vim-pathogen/autoload/pathogen.vim
+runtime bundle/pathogen/autoload/pathogen.vim
+call pathogen#infect()
 
 " Show commands while typing them
 set showcmd
@@ -8,7 +9,7 @@ set showcmd
 set mouse=a
 
 " Set GUI font to DejaVu Sans Mono
-if has("gui_gtk2")
+if has("gui_running")
     set guifont=DejaVu\ Sans\ Mono\ 10
 endif
 
@@ -39,18 +40,17 @@ autocmd FileType make setlocal noexpandtab
 " Banner style C
 set cinoptions=}1s,t0
 
-" Highlight trailing whitespace
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
-
 " Paste mode: Disable autoindent when pasting from an external source
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
+
+" Ignore insignificant files
+set wildignore+=*.o,*.obj,*.a
+set wildignore+=*.hi,cabal-dev,dist
+set wildignore+=*.class
+set wildignore+=*.pyc,*.pyo,__pycache__
+set wildignore+=.hg,.git
 
 " Set backup and swap directories
 let backupdir = $HOME . '/.local/share/vim/backup'
