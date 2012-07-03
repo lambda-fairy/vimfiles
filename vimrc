@@ -20,6 +20,9 @@ set smarttab
 " Insert a real tab with Shift-Tab
 inoremap <S-Tab> <C-V><Tab>
 
+" Gundo
+nnoremap <F5> :GundoToggle<CR>
+
 " Sane indents
 set tabstop=4
 set shiftwidth=4
