@@ -25,3 +25,6 @@
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = git://github.com/tpope/vim-surround.git
+[submodule "bundle/tango-morning"]
+	path = bundle/tango-morning
+	url = git://github.com/vim-scripts/tango-morning.vim.git
