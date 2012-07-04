@@ -8,9 +8,10 @@ set showcmd
 " Enable mouse support
 set mouse=a
 
-" Set GUI font to DejaVu Sans Mono
+" Set GUI stuff
 if has("gui_running")
     set guifont=DejaVu\ Sans\ Mono\ 10
+    colorscheme tango-morning
 endif
 
 " Convert tabs to spaces
@@ -54,6 +55,9 @@ set wildignore+=*.hi,cabal-dev,dist
 set wildignore+=*.class
 set wildignore+=*.pyc,*.pyo,__pycache__
 set wildignore+=.hg,.git
+
+" Allow :cd to a directory in ~/dev
+set cdpath+=~/dev
 
 " Set backup and swap directories
 let backupdir = $HOME . '/.local/share/vim/backup'
