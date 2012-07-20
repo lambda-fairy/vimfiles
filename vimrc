@@ -12,6 +12,9 @@ set mouse=a
 if has("gui_running")
     set guifont=DejaVu\ Sans\ Mono\ 10
     colorscheme tango-morning
+    " Remove toolbar and tearoff thingies
+    set guioptions-=T
+    set guioptions-=t
 endif
 
 " Convert tabs to spaces
