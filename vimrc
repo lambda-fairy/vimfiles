@@ -44,6 +44,10 @@ autocmd FileType xml setlocal shiftwidth=2
 autocmd FileType css setlocal shiftwidth=2
 autocmd FileType make setlocal noexpandtab
 
+" Map surround '~' to double-backticks; useful in reStructuredText
+autocmd FileType python let b:surround_126 = "``\r``"
+autocmd FileType rst let b:surround_126 = "``\r``"
+
 " Banner style C
 set cinoptions=}1s,t0
 
