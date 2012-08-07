@@ -57,9 +57,9 @@ set pastetoggle=<F2>
 set showmode
 
 " Ignore insignificant files
-set wildignore+=*.o,*.obj,*.a
+set wildignore+=*.o,*.obj,*.a,lib*
 set wildignore+=*.hi,cabal-dev,dist
-set wildignore+=*.class
+set wildignore+=*.class,*.jar,target
 set wildignore+=*.pyc,*.pyo,__pycache__
 set wildignore+=.hg,.git
 
