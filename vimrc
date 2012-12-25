@@ -35,7 +35,7 @@ set shiftwidth=4
 set incsearch
 set hlsearch
 
-" Enable indentation support
+" Enable filetype detection and fancy indentation
 filetype plugin indent on
 
 " Custom indentation settings
@@ -54,7 +54,6 @@ set cinoptions=}1s,t0
 " Paste mode: Disable autoindent when pasting from an external source
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
-set showmode
 
 " Ignore insignificant files
 set wildignore+=*.o,*.obj,*.a,lib*
