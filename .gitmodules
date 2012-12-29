@@ -28,6 +28,3 @@
 [submodule "bundle/tango-morning"]
 	path = bundle/tango-morning
 	url = git://github.com/vim-scripts/tango-morning.vim.git
-[submodule "bundle/lilypond-integrator"]
-	path = bundle/lilypond-integrator
-	url = git://github.com/gisraptor/vim-lilypond-integrator.git
