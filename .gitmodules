@@ -28,3 +28,6 @@
 [submodule "bundle/tango-morning"]
 	path = bundle/tango-morning
 	url = git://github.com/vim-scripts/tango-morning.vim.git
+[submodule "bundle/lilyvim"]
+	path = bundle/lilyvim
+	url = git@github.com:lfairy/lilyvim.git
