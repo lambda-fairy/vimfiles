@@ -11,7 +11,7 @@ set mouse=a
 " Set GUI stuff
 if has("gui_running")
     set guifont=DejaVu\ Sans\ Mono\ 10
-    colorscheme tango-morning
+    colorscheme solarized
     " Remove toolbar and tearoff thingies
     set guioptions-=T
     set guioptions-=t
