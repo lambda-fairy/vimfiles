@@ -1,5 +1,31 @@
 #!/bin/sh
 
+base="$(dirname "$(readlink -f "$0")")/.."
+
 git submodule init
 git submodule update
 git submodule foreach --recursive 'git checkout master'
+
+package_not_installed () {
+    name="$1"
+    if [ "$(dpkg-query -f '${Status}' -W "$name")" != 'install ok installed' ]; then
+        return 0
+    else
+        return 1
+    fi
+}
+
+missing_packages=''
+for name in vim-nox ruby-dev; do
+    if package_not_installed "$name"; then
+        missing_packages="$missing_packages $name"
+    fi
+done
+if [ -n "$missing_packages" ]; then
+    sudo apt-get install $missing_packages
+fi
+
+cd "$base/bundle/command-t/ruby/command-t"
+ruby extconf.rb
+make clean
+make
