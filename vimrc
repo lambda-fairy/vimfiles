@@ -51,6 +51,7 @@ autocmd FileType rst let b:surround_126 = "``\r``"
 
 " Banner style C
 set cinoptions=}1s,t0
+autocmd FileType javascript setlocal cinoptions+=+0
 
 " Paste mode: Disable autoindent when pasting from an external source
 nnoremap <F2> :set invpaste paste?<CR>
