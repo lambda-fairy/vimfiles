@@ -42,6 +42,7 @@ filetype plugin indent on
 autocmd FileType html setlocal shiftwidth=2
 autocmd FileType xml setlocal shiftwidth=2
 autocmd FileType css setlocal shiftwidth=2
+autocmd FileType javascript setlocal shiftwidth=2
 autocmd FileType make setlocal noexpandtab
 autocmd FileType gitconfig setlocal noexpandtab
 
