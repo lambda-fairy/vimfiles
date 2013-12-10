@@ -37,3 +37,6 @@
 [submodule "bundle/javascript"]
 	path = bundle/javascript
 	url = git@github.com:pangloss/vim-javascript.git
+[submodule "bundle/rust"]
+	path = bundle/rust
+	url = git@github.com:wting/rust.vim.git
