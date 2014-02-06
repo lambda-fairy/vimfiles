@@ -58,7 +58,7 @@ nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 
 " Ignore insignificant files
-set wildignore+=*.o,*.obj,*.a,lib*
+set wildignore+=*.o,*.obj,*.a,*.so
 set wildignore+=*.hi,cabal-dev,dist
 set wildignore+=*.class,*.jar,target
 set wildignore+=*.pyc,*.pyo,__pycache__
