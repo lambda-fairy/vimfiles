@@ -46,6 +46,9 @@ autocmd FileType javascript setlocal shiftwidth=2
 autocmd FileType make setlocal noexpandtab
 autocmd FileType gitconfig setlocal noexpandtab
 
+" Press <Q> to wrap current paragraph
+nnoremap <silent> Q gwip
+
 " Map surround '~' to double-backticks; useful in reStructuredText
 autocmd FileType python let b:surround_126 = "``\r``"
 autocmd FileType rst let b:surround_126 = "``\r``"
