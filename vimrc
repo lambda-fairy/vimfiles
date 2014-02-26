@@ -65,7 +65,8 @@ set wildignore+=*.o,*.obj,*.a,*.so
 set wildignore+=*.hi,cabal-dev,dist
 set wildignore+=*.class,*.jar,target
 set wildignore+=*.pyc,*.pyo,__pycache__
-set wildignore+=.hg,.git
+set wildignore+=.hg,.git,_darcs
+set wildignore+=build,lib
 
 " Allow :cd to a directory in ~/dev
 set cdpath+=~/dev
