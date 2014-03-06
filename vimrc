@@ -93,3 +93,19 @@ function PrintFile(fname)
     call delete(a:fname)
     return v:shell_error
 endfunc
+
+" CtrlP
+let g:ctrlp_map = '<Leader>t'
+
+let g:ctrlp_status_func = {
+            \ 'main': 'CtrlP_StatusMain',
+            \ 'prog': 'CtrlP_StatusProg',
+            \ }
+
+function! CtrlP_StatusMain(...)
+    return '%=%< %{getcwd()} %*'
+endfunction
+
+function! CtrlP_StatusProg(str)
+    return str
+endfunction
