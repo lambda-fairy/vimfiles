@@ -34,6 +34,7 @@ set shiftwidth=4
 " Fancy search
 set incsearch
 set hlsearch
+nnoremap <Leader>q :nohlsearch<CR>
 
 " Enable filetype detection and fancy indentation
 filetype plugin indent on
@@ -48,6 +49,9 @@ autocmd FileType gitconfig setlocal noexpandtab
 
 " Press <Q> to wrap current paragraph
 nnoremap <silent> Q gwip
+
+" Line numbers!
+nnoremap <Leader>l :setlocal number!<CR>
 
 " Map surround '~' to double-backticks; useful in reStructuredText
 autocmd FileType python let b:surround_126 = "``\r``"
