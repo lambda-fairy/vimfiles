@@ -1,12 +1,8 @@
-" Pathogen package manager
+" === PRELIMINARIES ====================================================
+
+" Load all the things
 runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
-
-" Show commands while typing them
-set showcmd
-
-" Enable mouse support
-set mouse=a
 
 " Set GUI stuff
 if has("gui_running")
@@ -21,12 +17,6 @@ endif
 set expandtab
 set smarttab
 
-" Insert a real tab with Shift-Tab
-inoremap <S-Tab> <C-V><Tab>
-
-" Gundo
-nnoremap <F5> :GundoToggle<CR>
-
 " Sane indents
 set tabstop=4
 set shiftwidth=4
@@ -34,7 +24,41 @@ set shiftwidth=4
 " Fancy search
 set incsearch
 set hlsearch
+
+" Show commands while typing them
+set showcmd
+
+" Enable mouse support
+set mouse=a
+
+
+" === KEY BINDINGS =====================================================
+
+" Insert a real tab with <S-Tab>
+inoremap <S-Tab> <C-V><Tab>
+
+" Press <Q> to wrap current paragraph
+nnoremap <silent> Q gwip
+
+" Paste mode: Disable autoindent when pasting from an external source
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+
+" Open Gundo
+nnoremap <F5> :GundoToggle<CR>
+
+" Open CtrlP
+nnoremap <Leader>t :CtrlP<CR>
+nnoremap <Leader>b :CtrlPBuffer<CR>
+
+" Line numbers!
+nnoremap <Leader>l :setlocal number!<CR>
+
+" Disable search highlighting
 nnoremap <Leader>q :nohlsearch<CR>
+
+
+" === INDENTATION AND SYNTAX ===========================================
 
 " Enable filetype detection and fancy indentation
 filetype plugin indent on
@@ -47,12 +71,6 @@ autocmd FileType javascript setlocal shiftwidth=2
 autocmd FileType make setlocal noexpandtab
 autocmd FileType gitconfig setlocal noexpandtab
 
-" Press <Q> to wrap current paragraph
-nnoremap <silent> Q gwip
-
-" Line numbers!
-nnoremap <Leader>l :setlocal number!<CR>
-
 " Map surround '~' to double-backticks; useful in reStructuredText
 autocmd FileType python let b:surround_126 = "``\r``"
 autocmd FileType rst let b:surround_126 = "``\r``"
@@ -60,9 +78,8 @@ autocmd FileType rst let b:surround_126 = "``\r``"
 " Banner style C
 set cinoptions=}1s,t0
 
-" Paste mode: Disable autoindent when pasting from an external source
-nnoremap <F2> :set invpaste paste?<CR>
-set pastetoggle=<F2>
+
+" === FILENAMES AND PATHS ==============================================
 
 " Ignore insignificant files
 set wildignore+=*.o,*.obj,*.a,*.so
@@ -89,6 +106,9 @@ endif
 let &backupdir = backupdir
 let &directory = directory
 
+
+" === MISCELLANY =======================================================
+
 " Set up printing
 set printexpr=PrintFile(v:fname_in)
 set printfont=DejaVu\ Sans\ Mono\ 10
@@ -98,9 +118,7 @@ function PrintFile(fname)
     return v:shell_error
 endfunc
 
-" CtrlP
-let g:ctrlp_map = '<Leader>t'
-
+" CtrlP custom status line
 let g:ctrlp_status_func = {
             \ 'main': 'CtrlP_StatusMain',
             \ 'prog': 'CtrlP_StatusProg',
