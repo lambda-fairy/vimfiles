@@ -21,6 +21,10 @@ set smarttab
 set tabstop=4
 set shiftwidth=4
 
+" Word wrap yay
+set wrap
+set linebreak
+
 " Fancy search
 set incsearch
 set hlsearch
