@@ -100,8 +100,8 @@ set wildignore+=build,lib
 set cdpath+=~/dev
 
 " Set backup and swap directories
-let backupdir = $HOME . '/.local/share/vim/backup'
-let directory = $HOME . '/.local/share/vim/swap'
+let backupdir = $HOME . '/.local/share/vim/backup//'
+let directory = $HOME . '/.local/share/vim/swap//'
 if exists('*mkdir')
     if !isdirectory(backupdir)
         call mkdir(backupdir, 'p', 0700)
