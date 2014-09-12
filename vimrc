@@ -1,5 +1,10 @@
 " === PRELIMINARIES ====================================================
 
+" Vim doesn't support fish yet
+if &shell =~ 'fish'
+    set shell=/bin/bash
+endif
+
 " Load all the things
 runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
