@@ -43,3 +43,6 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = git@github.com:kien/ctrlp.vim.git
+[submodule "bundle/coq"]
+	path = bundle/coq
+	url = git@github.com:jvoorhis/coq.vim
