@@ -72,11 +72,16 @@ nnoremap <Leader>q :nohlsearch<CR>
 " Enable filetype detection and fancy indentation
 filetype plugin indent on
 
+" Enable syntax highlighting
+syntax on
+
 " Custom indentation settings
 autocmd FileType html setlocal shiftwidth=2
 autocmd FileType xml setlocal shiftwidth=2
 autocmd FileType css setlocal shiftwidth=2
 autocmd FileType javascript setlocal shiftwidth=2
+autocmd FileType ruby setlocal shiftwidth=2
+autocmd FileType yaml setlocal shiftwidth=2
 autocmd FileType make setlocal noexpandtab
 autocmd FileType gitconfig setlocal noexpandtab
 
@@ -86,9 +91,6 @@ autocmd BufRead,BufNewFile *.md set filetype=markdown
 " Map surround '~' to double-backticks; useful in reStructuredText
 autocmd FileType python let b:surround_126 = "``\r``"
 autocmd FileType rst let b:surround_126 = "``\r``"
-
-" Banner style C
-set cinoptions=}1s,t0
 
 
 " === FILENAMES AND PATHS ==============================================
