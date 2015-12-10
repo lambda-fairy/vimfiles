@@ -13,9 +13,10 @@ call pathogen#infect()
 if has("gui_running")
     set guifont=DejaVu\ Sans\ Mono\ 10
     colorscheme solarized
-    " Remove toolbar and tearoff thingies
+    " Remove toolbar and tearoff thingies and menu
     set guioptions-=T
     set guioptions-=t
+    set guioptions-=m
 endif
 
 " Convert tabs to spaces
