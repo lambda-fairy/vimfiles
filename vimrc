@@ -102,7 +102,7 @@ set wildignore+=*.hi,cabal-dev,dist
 set wildignore+=*.class,*.jar,target
 set wildignore+=*.pyc,*.pyo,__pycache__
 set wildignore+=.hg,.git,_darcs
-set wildignore+=build,lib
+set wildignore+=build,lib,node_modules
 
 " Allow :cd to a directory in ~/dev
 set cdpath+=~/dev
