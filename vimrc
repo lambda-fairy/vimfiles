@@ -11,7 +11,7 @@ call pathogen#infect()
 
 " Set GUI stuff
 if has("gui_running")
-    set guifont=DejaVu\ Sans\ Mono\ 10
+    set guifont=Source\ Code\ Pro\ 10
     colorscheme solarized
     " Remove toolbar and tearoff thingies and menu
     set guioptions-=T
