@@ -13,9 +13,6 @@
 [submodule "bundle/gundo"]
 	path = bundle/gundo
 	url = git@github.com:sjl/gundo.vim.git
-[submodule "bundle/IndexedSearch"]
-	path = bundle/IndexedSearch
-	url = git@github.com:vim-scripts/IndexedSearch.git
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = git@github.com:wincent/Command-T.git
@@ -46,3 +43,6 @@
 [submodule "bundle/coq"]
 	path = bundle/coq
 	url = git@github.com:jvoorhis/coq.vim
+[submodule "bundle/indexed-search"]
+	path = bundle/indexed-search
+	url = git@github.com:henrik/vim-indexed-search.git
